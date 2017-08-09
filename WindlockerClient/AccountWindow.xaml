@@ -5,8 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WindlockerClient"
         mc:Ignorable="d"
-        Title="AccountWindow" Height="279.586" Width="444.675" ResizeMode="NoResize">
+        Title="AccountWindow" Height="500" Width="800" ResizeMode="NoResize" WindowStyle="None">
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250*"/>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="250*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="28"/>
+            <RowDefinition Height="317*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,0.6" StartPoint="0,0.4">
+                <GradientStop Color="#FF00B5D4" Offset="0"/>
+                <GradientStop Color="#FF008ECA" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid Background="#FF0082BA" Grid.ColumnSpan="3">
+            <Label Name="lblClose" Content="X" HorizontalAlignment="Right" Width="28" Height="28 " FontSize="18" Padding="9,0,0,0" PreviewMouseDown="lblClose_PreviewMouseDown"/>
+        </Grid>
+        <Frame x:Name="frame" Content="Frame" Grid.Column="1" Grid.Row="1" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
