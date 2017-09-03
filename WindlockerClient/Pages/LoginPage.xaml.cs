@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,38 @@ namespace WindlockerClient.Pages
         public LoginPage()
         {
             InitializeComponent();
+        }
+
+        private void lblSignup_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Frame pageFrame = null;
+            DependencyObject currParent = VisualTreeHelper.GetParent(this);
+            while (currParent != null && pageFrame == null)
+            {
+                pageFrame = currParent as Frame;
+                currParent = VisualTreeHelper.GetParent(currParent);
+            }
+
+            // Change the page of the frame.
+            if (pageFrame != null)
+            {
+                pageFrame.Navigate(new SignupPage());
+            }
+        }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            string l = ServerCommunication.Login(txtID.Text, txtPW.Password);
+            if (l != "error")
+            {
+                RegistryKey key = Registry.CurrentUser;
+                key.CreateSubKey("Windlocker");
+                key = key.OpenSubKey("Windlocker", true);
+                key.SetValue("token", l);
+                Session.Token = l;
+                Session.ID = txtID.Text;
+                MessageBox.Show("Login Success!", "Login", MessageBoxButton.OK, MessageBoxImage.None);
+            }
         }
     }
 }

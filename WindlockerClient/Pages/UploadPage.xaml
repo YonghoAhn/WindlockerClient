@@ -5,30 +5,21 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WindlockerClient.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      d:DesignHeight="320" d:DesignWidth="640"
       Title="UploadPage">
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="97*"/>
-            <RowDefinition Height="20*"/>
-            <RowDefinition Height="183*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="10"/>
-            <ColumnDefinition Width="40*"/>
-            <ColumnDefinition Width="40*"/>
-            <ColumnDefinition Width="40*"/>
-            <ColumnDefinition Width="10"/>
-        </Grid.ColumnDefinitions>
-        <ListBox x:Name="FileListBox" Grid.Column="1" Background="{x:Null}" PreviewDragEnter="FileListBox_PreviewDragEnter" Grid.ColumnSpan="3" AllowDrop="True" SelectionMode="Extended"/>
-        <Button x:Name="btnFile" Grid.Column="2" Content="파일 선택" Grid.Row="1" Background="{x:Null}" Foreground="black" BorderBrush="#FF039BE5" Click="btnFile_Click" />
-        <Button x:Name="btnClear" Content="초기화" Grid.Row="1" Background="{x:Null}" Foreground="black" BorderBrush="#FF039BE5"  Grid.Column="1" Click="btnClear_Click" />
-        <Button x:Name="btnRemove" Grid.Column="3" Content="삭제" Grid.Row="1" Background="{x:Null}" Foreground="black" BorderBrush="#FF039BE5" Click="btnRemove_Click" />
-        <StackPanel Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" Margin="0,51,0,50">
-            <Button Content="업로드" Margin="0,0,0,10 " Background="{x:Null}" Foreground="black" BorderBrush="#FF039BE5" Click="Button_Click"/>
-            <Label Content="인증번호 확인" HorizontalAlignment="Center" FontFamily="NanumBarunGothic"></Label>
-            <TextBox Name="txtKey" Height="28" TextWrapping="Wrap" Text="" HorizontalContentAlignment="Center" Background="{x:Null}" BorderBrush="#FF039BE5" Foreground="#FF039BE5" FontFamily="NanumBarunGothic" Padding="0,5,0,0" IsEnabled="False"/>
+    <Grid Background="White">
+        <StackPanel>
+
+            <ListBox Height="260" Padding="10,0,10,0" Margin="10,10,10,0" />
+
+
+
+            <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,10,10,10" Orientation="Horizontal">
+                <Button Content="Remove" Width="80" Margin="10,0,370,0" Background="Gray" Foreground="White" BorderBrush="Gray"/>
+                <Button Content="파일 추가" Width="100" Height="25" Background="Gray" Foreground="White"/>
+                <Button Content="다음" Width="60" Height="25" Margin="10,0,0,0" Background="#FF15AFDC" Foreground="White"/>
+            </StackPanel>
         </StackPanel>
-     </Grid>
+    </Grid>
 </Page>

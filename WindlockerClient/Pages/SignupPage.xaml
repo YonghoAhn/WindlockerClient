@@ -14,7 +14,7 @@
             <TextBox x:Name="txtID" Margin="0,5,0,0" Height="30" Background="Transparent" BorderThickness="0,0,0,3" BorderBrush="#FF33bbda" Foreground="White"/>
             <PasswordBox x:Name="txtPW" Margin="0,5,0,0" Height="30" Background="Transparent" BorderThickness="0,0,0,3" BorderBrush="#FF33bbda" Foreground="White"/>
             <Button Name="btnSignup" Content="회원가입" Margin="0,15,0,0" Background="Transparent" BorderBrush="#FFFFFFFF" BorderThickness="1,1,1,1" Foreground="#FFFFFFFF" FontFamily="NanumBarunGothic" Height="30" Width="150" Click="btnSignup_Click"/>
-            <Button Name="btnMain" Content="초기 화면으로" Margin="0,10,0,0" Background="Transparent" BorderBrush="#FFFFFFFF" BorderThickness="1,1,1,1" Foreground="#FFFFFFFF" FontFamily="NanumBarunGothic" Height="30" Width="150" PreviewMouseDown="btnMain_PreviewMouseDown"/>
+            <Button Name="btnMain" Content="초기 화면으로" Margin="0,10,0,0" Background="Transparent" BorderBrush="#FFFFFFFF" BorderThickness="1,1,1,1" Foreground="#FFFFFFFF" FontFamily="NanumBarunGothic" Height="30" Width="150" Click="btnMain_Click"/>
         </StackPanel>
     </Grid>
 </Page>

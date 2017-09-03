@@ -24,5 +24,34 @@ namespace WindlockerClient.Pages
         {
             InitializeComponent();
         }
+
+        private void btnMain_Click(object sender, RoutedEventArgs e)
+        {
+            Frame pageFrame = null;
+            DependencyObject currParent = VisualTreeHelper.GetParent(this);
+            while (currParent != null && pageFrame == null)
+            {
+                pageFrame = currParent as Frame;
+                currParent = VisualTreeHelper.GetParent(currParent);
+            }
+
+            // Change the page of the frame.
+            if (pageFrame != null)
+            {
+                pageFrame.Navigate(new LoginPage());
+            }
+        }
+
+        private void btnSignup_Click(object sender, RoutedEventArgs e)
+        {
+            if (ServerCommunication.Signup(txtID.Text, txtPW.Password, txtName.Text))
+            {
+                MessageBox.Show("Signup Success!", "Signup", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                MessageBox.Show("Signup Error!", "Signup", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+        }
     }
 }

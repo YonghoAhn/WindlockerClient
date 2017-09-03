@@ -5,27 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WindlockerClient"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="576" Width="1024" WindowStyle="None">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="120"/>
+            <ColumnDefinition Width="150"/>
             <ColumnDefinition Width="406*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="25"/>
+            <RowDefinition Height="35"/>
             <RowDefinition Height="35*"/>
         </Grid.RowDefinitions>
-        <Frame Name="frame" Content="Frame" Grid.Column="1" Grid.Row="1" NavigationUIVisibility="Hidden"/>
-        <Grid Grid.Row="1" Background="#FF29B6F6">
-            <Image HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" Source="Resources/logo_and_type.png"/>
-            <Label Name="lblDownload" Content="파일 다운로드" HorizontalAlignment="Center" Margin="0,115,0,0" VerticalAlignment="Top" PreviewMouseDown="lblDownload_PreviewMouseDown"/>
-            <Label Name="lblUpload" Content="파일 업로드" HorizontalAlignment="Center" Margin="0,150,0,0" VerticalAlignment="Top" PreviewMouseDown="lblUpload_PreviewMouseDown"/>
-            <Label Name="lblLogin" Content="로그인" HorizontalAlignment="Center" Margin="0,185,0,0" VerticalAlignment="Top" PreviewMouseLeftButtonUp="lblLogin_PreviewMouseLeftButtonUp" PreviewMouseDown="lblLogin_PreviewMouseDown"/>
-            <Label Name="lblLock" Content="잠금" HorizontalAlignment="Center" Margin="0,220,0,0" VerticalAlignment="Top" PreviewMouseDown="lblLock_PreviewMouseDown" />
-
-        </Grid>
+        <Frame Name="frame" Content="Frame" Grid.Column="1" Grid.Row="1" NavigationUIVisibility="Hidden" Source="/WindlockerClient;component/Pages/DownloadPage.xaml"/>
+        <StackPanel Grid.Row="1" Background="#FF29B6F6">
+            <Image HorizontalAlignment="Center" Height="60" Margin="0,20,0,0" VerticalAlignment="Top" Width="80" Source="img/Logo.png"/>
+            <Ellipse Name="ElipseProfilePic" Width="80" Height="80" Margin="0,20,0,0" Fill="White"></Ellipse>
+            <Label Name="lblNickname" Content="Nickname" Margin="0,10,0,0" HorizontalAlignment="Center" FontSize="20" Foreground="White" FontFamily="/WindlockerClient;component/Resources/#NanumBarunGothic"/>
+            <Label Name="lblLock" Content="잠금" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="/WindlockerClient;component/Resources/#NanumBarunGothic Light"/>
+            <Label Name="lblFile" Content="내 파일" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="/WindlockerClient;component/Resources/#NanumBarunGothic Light"/>
+            <Label Name="lblSetting" Content="설정" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="/WindlockerClient;component/Resources/#NanumBarunGothic Light"/>
+            <Label Name="lblLogin" Content="로그인" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="/WindlockerClient;component/Resources/#NanumBarunGothic Light"/>
+        </StackPanel>
         <Grid Grid.ColumnSpan="2" Background="#FF0082BA">
-            <Label Name="lblClose" Padding="9,3.5,3,0" Content="X" HorizontalAlignment="Right" Width="25" PreviewMouseDown="lblClose_PreviewMouseDown"/>
+            <Label Name="lblClose" Padding="9,0,0,0" Content="X" HorizontalAlignment="Right" VerticalAlignment="Center" Width="25" Foreground="White" FontSize="20" PreviewMouseDown="lblClose_PreviewMouseDown" Margin="0,2,4,6"/>
         </Grid>
 
     </Grid>

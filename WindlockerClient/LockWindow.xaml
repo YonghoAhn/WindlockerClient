@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WindlockerClient"
         mc:Ignorable="d"
-        Title="LockWindow" Height="300" Width="300">
+        Name="LockWindows"
+        Height="768" Width="1024" WindowStyle="None" ResizeMode="CanMinimize" Loaded="Window_Loaded" SizeChanged="LockWindows_SizeChanged">
+    <Window.Background>
+        <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/43.png"/>
+    </Window.Background>
     <Grid>
-        
+        <Label Name="lblTime" Content="02:51" HorizontalAlignment="Left" Margin="30,0,0,130" VerticalAlignment="Bottom" Height="139" Width="780" FontSize="100" FontFamily="NanumBarunGothic" Foreground="White"/>
+        <Label Name="lblDate" Content="7월 16일 금요일" HorizontalAlignment="Left" Margin="30,0,0,10" VerticalAlignment="Bottom" Height="139" Width="780" FontSize="100" FontFamily="NanumBarunGothic" Foreground="White"/>
+
     </Grid>
 </Window>

@@ -23,5 +23,10 @@ namespace WindlockerClient
         {
             InitializeComponent();
         }
+
+        private void lblClose_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Close();
+        }
     }
 }

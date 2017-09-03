@@ -40,6 +40,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -64,7 +65,19 @@
     <Compile Include="InteractionManager.cs" />
     <Compile Include="Models\AccountModel.cs" />
     <Compile Include="Models\UsageModel.cs" />
+    <Compile Include="Pages\UploadConfirmPage.xaml.cs">
+      <DependentUpon>UploadConfirmPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="ServerCommunication.cs" />
+    <Compile Include="Session.cs" />
+    <Compile Include="UploadWindow.xaml.cs">
+      <DependentUpon>UploadWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="AccountWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -108,7 +121,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\UploadConfirmPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\UploadPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UploadWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -135,11 +156,6 @@
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -162,24 +178,30 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <None Include="Resources\43.png" />
+    <None Include="orgResource\43.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\169.png" />
+    <None Include="orgResource\169.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\1610.png" />
+    <None Include="orgResource\1610.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Logo.ico" />
+    <None Include="orgResource\Logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Logo.png" />
+    <None Include="orgResource\logo_and_type.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logo_and_type.png" />
+    <None Include="orgResource\icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\1610.png" />
+    <Resource Include="img\169.png" />
+    <Resource Include="img\43.png" />
+    <Resource Include="img\Logo.png" />
+    <Resource Include="img\logo_and_type.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
