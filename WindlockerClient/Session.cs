@@ -8,7 +8,6 @@ namespace WindlockerClient
 {
     class Session
     {
-        public static string Token { get; internal set; }
-        public static string ID { get; internal set; }
+ 
     }
 }

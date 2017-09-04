@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WindlockerClient.Models;
+using WindlockerClient.Pages;
 
 namespace WindlockerClient
 {
@@ -23,11 +25,53 @@ namespace WindlockerClient
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
         private void lblClose_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
             Close();
+        }
+
+        private void FrameHandler_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void lblClose_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Close();
+        }
+
+        private void FrameHandler_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
+
+        private void btnNickname_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnLock_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnFile_Click(object sender, RoutedEventArgs e)
+        {
+            frame.Navigate(new DownloadPage());
+        }
+
+        private void btnSetting_Click(object sender, RoutedEventArgs e)
+        {
+            SettingWindow settingWindow = new SettingWindow();
+            settingWindow.ShowDialog();
+        }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

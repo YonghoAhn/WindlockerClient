@@ -1,4 +1,4 @@
-﻿<Window x:Class="WindlockerClient.UploadWindow"
+﻿<Window Name="UploadWindows" x:Class="WindlockerClient.UploadWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,10 +6,17 @@
         xmlns:local="clr-namespace:WindlockerClient"
         mc:Ignorable="d"
         WindowStyle="None"
-        Title="UploadWindow" Height="380" Width="640">
+        Title="UploadWindow" Height="380" Width="640" MouseLeftButtonDown="UploadWindow_MouseLeftButtonDown" ResizeMode="NoResize">
     <Grid>
-        <Frame Source="/WindlockerClient;component/Pages/UploadPage.xaml">
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="파일 업로드" Margin="20,5,470,0" FontFamily="/WindlockerClient;component/Resources/#NanumBarunGothic Light" FontSize="16" VerticalAlignment="Center"/>
+                
+                <Button Name="btnClose" Content="X" VerticalAlignment="Center" HorizontalAlignment="Right" Width="25" Height="25" Background="Transparent" BorderBrush="Gray" Click="btnClose_Click" FontSize="15" />
+            </StackPanel>
+            <Frame Source="/WindlockerClient;component/Pages/UploadPage.xaml" Margin="10,10,10,10" Height="320">
             
         </Frame>
+        </StackPanel>
     </Grid>
 </Window>

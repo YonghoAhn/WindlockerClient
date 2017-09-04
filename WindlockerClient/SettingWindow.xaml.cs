@@ -15,23 +15,13 @@ using System.Windows.Shapes;
 namespace WindlockerClient
 {
     /// <summary>
-    /// UploadWindow.xaml에 대한 상호 작용 논리
+    /// SettingWindow.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class UploadWindow : Window
+    public partial class SettingWindow : Window
     {
-        public UploadWindow()
+        public SettingWindow()
         {
             InitializeComponent();
-        }
-
-        private void btnClose_Click(object sender, RoutedEventArgs e)
-        {
-            Close();
-        }
-
-        private void UploadWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            DragMove();
         }
     }
 }

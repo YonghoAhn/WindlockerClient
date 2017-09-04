@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WindlockerClient"
         mc:Ignorable="d"
-        Title="MainWindow" Height="576" Width="1024" WindowStyle="None">
+        Title="MainWindow" Height="486" Width="864" WindowStyle="None" AllowsTransparency="True" ResizeMode="CanResizeWithGrip">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="150"/>
@@ -19,14 +19,14 @@
         <StackPanel Grid.Row="1" Background="#FF29B6F6">
             <Image HorizontalAlignment="Center" Height="60" Margin="0,20,0,0" VerticalAlignment="Top" Width="80" Source="img/Logo.png"/>
             <Ellipse Name="ElipseProfilePic" Width="80" Height="80" Margin="0,20,0,0" Fill="White"></Ellipse>
-            <Label Name="lblNickname" Content="Nickname" Margin="0,10,0,0" HorizontalAlignment="Center" FontSize="20" Foreground="White" FontFamily="/WindlockerClient;component/Resources/#NanumBarunGothic"/>
-            <Label Name="lblLock" Content="잠금" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="/WindlockerClient;component/Resources/#NanumBarunGothic Light"/>
-            <Label Name="lblFile" Content="내 파일" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="/WindlockerClient;component/Resources/#NanumBarunGothic Light"/>
-            <Label Name="lblSetting" Content="설정" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="/WindlockerClient;component/Resources/#NanumBarunGothic Light"/>
-            <Label Name="lblLogin" Content="로그인" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="/WindlockerClient;component/Resources/#NanumBarunGothic Light"/>
+            <Button Name="btnNickname" Content="Nickname" Margin="0,10,0,0" HorizontalAlignment="Center" FontSize="20" Foreground="White" FontFamily="/WindlockerClient;component/Resources/#NanumBarunGothic" Background="Transparent" BorderBrush="Transparent" Click="btnNickname_Click"/>
+            <Button Name="btnLock" Content="잠금" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="/WindlockerClient;component/Resources/#NanumBarunGothic Light" Background="Transparent" BorderBrush="Transparent" Click="btnLock_Click"/>
+            <Button Name="btnFile" Content="내 파일" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="/WindlockerClient;component/Resources/#NanumBarunGothic Light" Background="Transparent" BorderBrush="Transparent" Click="btnFile_Click"/>
+            <Button Name="btnSetting" Content="설정" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="/WindlockerClient;component/Resources/#NanumBarunGothic Light" Background="Transparent" BorderBrush="Transparent" Click="btnSetting_Click"/>
+            <Button Name="btnLogin" Content="로그인" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="/WindlockerClient;component/Resources/#NanumBarunGothic Light" Background="Transparent" BorderBrush="Transparent" Click="btnLogin_Click"/>
         </StackPanel>
-        <Grid Grid.ColumnSpan="2" Background="#FF0082BA">
-            <Label Name="lblClose" Padding="9,0,0,0" Content="X" HorizontalAlignment="Right" VerticalAlignment="Center" Width="25" Foreground="White" FontSize="20" PreviewMouseDown="lblClose_PreviewMouseDown" Margin="0,2,4,6"/>
+        <Grid Name="FrameHandler" Grid.ColumnSpan="2" Background="#FF0082BA" PreviewMouseLeftButtonDown="FrameHandler_PreviewMouseLeftButtonDown" >
+            <Label Name="lblClose" Padding="9,0,0,0" Content="X" HorizontalAlignment="Right" VerticalAlignment="Center" Width="25" Foreground="White" FontSize="20" Margin="0,2,4,6" PreviewMouseLeftButtonDown="lblClose_PreviewMouseLeftButtonDown"/>
         </Grid>
 
     </Grid>

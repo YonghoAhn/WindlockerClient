@@ -41,5 +41,11 @@ namespace WindlockerClient.Pages
                 }
             }
         }
+
+        private void btnUpload_Click(object sender, RoutedEventArgs e)
+        {
+            UploadWindow uploadWindow = new UploadWindow();
+            uploadWindow.ShowDialog();
+        }
     }
 }
