@@ -10,28 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WindlockerClient
+namespace WindlockerClient.Pages
 {
     /// <summary>
-    /// SettingWindow.xaml에 대한 상호 작용 논리
+    /// UpdatePage.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class SettingWindow : Window
+    public partial class UpdatePage : Page
     {
-        public SettingWindow()
+        public UpdatePage()
         {
             InitializeComponent();
-        }
-
-        private void FrameHandler_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            DragMove();
-        }
-
-        private void lblClose_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            Close();
         }
     }
 }

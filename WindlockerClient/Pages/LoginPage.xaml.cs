@@ -52,8 +52,10 @@ namespace WindlockerClient.Pages
                 key.CreateSubKey("Windlocker");
                 key = key.OpenSubKey("Windlocker", true);
                 key.SetValue("token", l);
-                Session.Token = l;
-                Session.ID = txtID.Text;
+                Models.AccountModel.Token = l;
+                Models.AccountModel.ID = txtID.Text;
+                txtID.Text = "";
+                txtPW.Password = "";
                 MessageBox.Show("Login Success!", "Login", MessageBoxButton.OK, MessageBoxImage.None);
             }
         }

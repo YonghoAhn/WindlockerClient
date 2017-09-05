@@ -66,6 +66,15 @@
     <Compile Include="InteractionManager.cs" />
     <Compile Include="Models\AccountModel.cs" />
     <Compile Include="Models\UsageModel.cs" />
+    <Compile Include="Pages\AccountSettingPage.xaml.cs">
+      <DependentUpon>AccountSettingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DownloadSettingPage.xaml.cs">
+      <DependentUpon>DownloadSettingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UpdatePage.xaml.cs">
+      <DependentUpon>UpdatePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\UploadConfirmPage.xaml.cs">
       <DependentUpon>UploadConfirmPage.xaml</DependentUpon>
     </Compile>
@@ -105,11 +114,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\AccountSettingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\CryptoPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\DownloadPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\DownloadSettingPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -122,6 +139,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\SignupPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\UpdatePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -210,6 +231,12 @@
     <Resource Include="img\43.png" />
     <Resource Include="img\Logo.png" />
     <Resource Include="img\logo_and_type.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\LogoBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\placeholder.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

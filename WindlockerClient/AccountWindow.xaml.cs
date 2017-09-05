@@ -22,6 +22,7 @@ namespace WindlockerClient
         public AccountWindow()
         {
             InitializeComponent();
+            frame.Navigate(new Pages.LoginPage());
         }
 
         private void lblClose_PreviewMouseDown(object sender, MouseButtonEventArgs e)

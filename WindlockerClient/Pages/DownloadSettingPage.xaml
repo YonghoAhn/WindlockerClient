@@ -1,0 +1,24 @@
+﻿<Page x:Class="WindlockerClient.Pages.DownloadSettingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WindlockerClient.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="450"
+      Title="DownloadSettingPage">
+
+    <Grid Background="White">
+        <StackPanel>
+            <Label Content="다운로드 경로" Margin="10,10,0,15" FontSize="22" FontFamily="/WindlockerClient;component/Resources/#NanumBarunGothic Light" />
+            <StackPanel Orientation="Horizontal">
+                <Label Content="위치" FontFamily="/WindlockerClient;component/Resources/#NanumBarunGothic Light" Margin="20,0,0,0"/>
+                <TextBox IsEnabled="False" BorderThickness="0,0,0,1" Width="280" Margin="10,0,15,0" BorderBrush="Black"/>
+                <Button Content="찾아보기" FontFamily="/WindlockerClient;component/Resources/#NanumBarunGothic Light" Width="80" Background="White" BorderBrush="LightGray"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+            <Button Content="확인 및 저장" Width="100" Background="#FF15AFDC" Foreground="White" Height="30"/>
+        </StackPanel>
+    </Grid>
+</Page>
