@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -122,9 +123,20 @@ namespace WindlockerClient
             }
         }
 
-        public static string Login(string id, string pw)
+        public static string Login(string id, string pw, bool isHashed = false)
         {
-            string post = POST(SERVER_URL + "/auth/signin", "id=" + id + "&passwd=" + pw);
+            SHA256Managed sHA256Managed = new SHA256Managed();
+            string post = "";
+            if (!isHashed)
+            {
+                string password = Convert.ToBase64String(sHA256Managed.ComputeHash(Encoding.UTF8.GetBytes(pw)));
+                post = POST(SERVER_URL + "/auth/signin", "id=" + id + "&passwd=" + password);
+            }
+            else
+            {
+                post = POST(SERVER_URL + "/auth/signin", "id=" + id + "&passwd=" + pw);
+            }
+            
             if (post != "")
             {
                 JObject j = JObject.Parse(post);
