@@ -52,11 +52,21 @@ namespace WindlockerClient.Pages
                 key.CreateSubKey("Windlocker");
                 key = key.OpenSubKey("Windlocker", true);
                 key.SetValue("token", l);
+                key.SetValue("ID", txtID.Text);
                 Models.AccountModel.Token = l;
                 Models.AccountModel.ID = txtID.Text;
                 txtID.Text = "";
                 txtPW.Password = "";
                 MessageBox.Show("Login Success!", "Login", MessageBoxButton.OK, MessageBoxImage.None);
+                AccountWindow aw = null;
+                DependencyObject currPanel = VisualTreeHelper.GetParent(this);
+                DependencyObject currParent = VisualTreeHelper.GetParent(currPanel);
+                while (currParent != null && aw == null)
+                {
+                    aw = currParent as AccountWindow;
+                    currParent = VisualTreeHelper.GetParent(currParent);
+                }
+                aw.Close();
             }
         }
     }
