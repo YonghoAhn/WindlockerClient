@@ -22,8 +22,8 @@
                 <GradientStop Color="#FF008ECA" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Grid Background="#FF0082BA" Grid.ColumnSpan="3">
-            <Label Name="lblClose" Content="X" HorizontalAlignment="Right" Width="28" Height="28 " FontSize="18" Padding="9,0,0,0" PreviewMouseDown="lblClose_PreviewMouseDown"/>
+        <Grid Name="Handler" Background="#FF0082BA" Grid.ColumnSpan="3" PreviewMouseLeftButtonDown="Handler_PreviewMouseLeftButtonDown" >
+            <Label Name="lblClose" Content="X" HorizontalAlignment="Right" Width="28" Height="28 " FontSize="18" Padding="9,0,0,0" Foreground="White" PreviewMouseDown="lblClose_PreviewMouseDown"/>
         </Grid>
         <Frame x:Name="frame" Content="Frame" Grid.Column="1" Grid.Row="1" NavigationUIVisibility="Hidden"/>
     </Grid>

@@ -29,5 +29,11 @@ namespace WindlockerClient
         {
             Close();
         }
+
+        private void Handler_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            base.OnPreviewMouseLeftButtonDown(e);
+            DragMove();
+        }
     }
 }

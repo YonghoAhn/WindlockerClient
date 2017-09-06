@@ -60,7 +60,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AccountWindow.xaml.cs">
+    <Compile Include="Windows\AccountWindow.xaml.cs">
       <DependentUpon>AccountWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="InteractionManager.cs" />
@@ -85,21 +85,21 @@
     </Compile>
     <Compile Include="ServerCommunication.cs" />
     <Compile Include="Session.cs" />
-    <Compile Include="SettingWindow.xaml.cs">
+    <Compile Include="Windows\SettingWindow.xaml.cs">
       <DependentUpon>SettingWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UploadWindow.xaml.cs">
+    <Compile Include="Windows\UploadWindow.xaml.cs">
       <DependentUpon>UploadWindow.xaml</DependentUpon>
     </Compile>
-    <Page Include="AccountWindow.xaml">
+    <Page Include="Windows\AccountWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="LockWindow.xaml">
+    <Page Include="Windows\LockWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Windows\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -107,18 +107,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="LockWindow.xaml.cs">
+    <Compile Include="Windows\LockWindow.xaml.cs">
       <DependentUpon>LockWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Pages\AccountSettingPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\CryptoPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -131,10 +127,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\LoginPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\SettingPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -154,27 +146,21 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SettingWindow.xaml">
+    <Page Include="Windows\SettingWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UploadWindow.xaml">
+    <Page Include="Windows\UploadWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pages\CryptoPage.xaml.cs">
-      <DependentUpon>CryptoPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Pages\DownloadPage.xaml.cs">
       <DependentUpon>DownloadPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\SettingPage.xaml.cs">
-      <DependentUpon>SettingPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\SignupPage.xaml.cs">
       <DependentUpon>SignupPage.xaml</DependentUpon>
